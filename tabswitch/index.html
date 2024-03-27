@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab switching</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="boxes">
+        <p class="box-1"></p>
+        <p class="box-2"></p>
+        <p class="box-3"></p>
+        <p class="box-4"></p>
+    </div>
+    <div class="hero">
+        <div class="btn-box">
+            <button id="btn1" onclick="openHTML()">HTML</button>
+            <button id="btn2" onclick="openCSS()">CSS</button>
+            <button id="btn3" onclick="openJS()">JAVASCRIPT</button>
+        </div>
+        <div class="content" id="content1">
+            <div class="left">
+                    <h1>Learn HTML</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi, consectetur eligendi veniam modi quae porro officia iste, quas distinctio ad voluptate minima dolor ipsa aut! Sequi necessitatibus pariatur porro?</p>
+                    <a href="#">Watch Video</a>
+            </div>
+            <div class="right">
+<img src="animated.jpg" alt="">
+            </div>
+        </div>
+        <div class="content" id="content2">
+            <div class="left">
+                    <h1>Learn CSS</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi, consectetur eligendi veniam modi quae porro officia iste, quas distinctio ad voluptate minima dolor ipsa aut! Sequi necessitatibus pariatur porro?</p>
+                    <a href="#">Watch Video</a>
+            </div>
+            <div class="right">
+<img src="animated.jpg" alt="">
+            </div>
+        </div>
+        <div class="content" id="content3">
+            <div class="left">
+                    <h1>Learn JS</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sequi, consectetur eligendi veniam modi quae porro officia iste, quas distinctio ad voluptate minima dolor ipsa aut! Sequi necessitatibus pariatur porro?</p>
+                    <a href="#">Watch Video</a>
+            </div>
+            <div class="right">
+<img src="animated.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        var content1=document.getElementById("content1");
+        var content2=document.getElementById("content2");
+        var content3=document.getElementById("content3");
+        var btn1=document.getElementById("btn1");
+        var btn2=document.getElementById("btn2");
+        var btn3=document.getElementById("btn3");
+        function openHTML(){
+            btn1.style.color="orange";
+            btn2.style.color="black";
+            btn3.style.color="black";
+
+            content1.style.transform="translateX(0)";
+            content2.style.transform="translateX(100%)";
+            content3.style.transform="translateX(100%)";
+        }
+        function openCSS(){
+            btn2.style.color="orange";
+            btn1.style.color="black";
+            btn3.style.color="black";
+            content1.style.transform="translateX(100%)";
+            content2.style.transform="translateX(0)";
+           
+            content3.style.transform="translateX(100%)";
+        }
+        function openJS(){
+            btn3.style.color="orange";
+            btn1.style.color="black";
+            btn2.style.color="black";
+            content1.style.transform="translateX(100%)";
+
+            content2.style.transform="translateX(100%)";
+            content3.style.transform="translateX(0)";
+     
+        }
+     
+        
+
+    </script>
+</body>
+</html>
